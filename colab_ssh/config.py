@@ -25,9 +25,9 @@ def install_apt_pkg():
     """
     apt_manager = AptManager()
     apt_manager.commit()
-    all_pkg = ['nano', 'htop', 'tmux', 'vim', 'cmake',
+    all_pkg = ['nano', 'htop', 'cmake',
                'libncurses5-dev', 'libncursesw5-dev', 'git',
-               'tree', 'zip', 'expect', 'pigz', 'pv']
+               'tree', 'zip']
     apt_manager.install_pkg(*all_pkg)
     apt_manager.commit()
 
@@ -44,40 +44,14 @@ def install_nvtop():
 
 
 def install_pip_dependencies():
-    """
-    Install pip dependencies that I use everyday
-    """
-    print("Installing pip dependencies")
-    command = "pip3 install imgaug clearml ipdb"
-    run_command(command)
+    pass
 
 
 def config_bashrc():
-    """
-    Add usefull bash configuration that I use everyday
-    """
-    print("Configuring .bashrc")
-    command = """echo "export LD_LIBRARY_PATH=/usr/lib64-nvidia" >> /root/.bashrc
-                 echo "alias ls='ls --color'" >> ~/.bashrc
-                 echo "alias ll='ls --color -l'" >> ~/.bashrc
-                 echo "alias l='ls --color -lA'" >> ~/.bashrc
-                 echo "alias cpwd='pwd|pbcopy'" >> ~/.bashrc"""
-    run_command(command)
-
+    pass
 
 def install_gdrive_rclone():
-    """
-    Install gdrive and rclone, which are the CLI that I use to interact with
-    various clould storage services.
-    """
-    print("Installing gdrive and rclone")
-    command = """wget https://github.com/lamhoangtung/gdrive/releases/download/linux-x64/gdrive-linux-x64
-                 mv gdrive-linux-x64 gdrive
-                 chmod +x gdrive
-                 install gdrive /usr/local/bin/gdrive
-                 rm -rf gdrive
-                 curl https://rclone.org/install.sh | bash"""
-    run_command(command)
+    pass
 
 
 def install_iterm_shell_integration():
@@ -91,13 +65,7 @@ def install_iterm_shell_integration():
 
 
 def install_vim_tmux():
-    """
-    Install my custom vim and tmux configuration
-    """
-    print("Installing custom vim and tmux")
-    command = """curl -L https://github.com/lamhoangtung/dotfile/raw/linux/install_vim.sh | bash
-                 wget https://github.com/lamhoangtung/dotfile/raw/linux/.tmux.conf -P ~"""
-    run_command(command)
+    pass
 
 
 def install_common_tool():
