@@ -3,7 +3,7 @@ import time
 from typing import List, Optional, Union
 from config import config_root_password, install_common_tool
 from ssh import config_ssh_server, parse_public_key
-from tunel import config_argo_tunnel
+from tunnel import config_argo_tunnel
 from utils import check_gpu_available, get_instance_info
 
 
@@ -42,4 +42,3 @@ def setup_ssh(public_key: Union[str, List[str]], mattermost_webhook_address: Opt
 
 
     print(msg)
-    
