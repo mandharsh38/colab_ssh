@@ -1,12 +1,10 @@
 """Just look at the name, it's main"""
 import time
 from typing import List, Optional, Union
-
-from colab_ssh.config import config_root_password, install_common_tool
-from colab_ssh.notification import send_notification_to_mattermost
-from colab_ssh.ssh import config_ssh_server, parse_public_key
-from colab_ssh.tunel import config_argo_tunnel
-from colab_ssh.utils import check_gpu_available, get_instance_info
+from config import config_root_password, install_common_tool
+from ssh import config_ssh_server, parse_public_key
+from tunel import config_argo_tunnel
+from utils import check_gpu_available, get_instance_info
 
 
 def setup_ssh(public_key: Union[str, List[str]], mattermost_webhook_address: Optional[str] = None):
@@ -52,10 +50,3 @@ def setup_ssh(public_key: Union[str, List[str]], mattermost_webhook_address: Opt
 
     print(msg)
 
-
-def loop_forever():  # pragma: no cover
-    """
-    Utility function to keep the colab notebook from disconnecting the kernel.
-    """
-    while True:
-        time.sleep(15)

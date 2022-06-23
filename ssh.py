@@ -4,7 +4,7 @@ import subprocess
 import urllib.request
 from typing import List
 
-from colab_ssh.utils import AptManager
+from utils import AptManager
 
 
 def parse_public_key(public_key) -> List[str]:

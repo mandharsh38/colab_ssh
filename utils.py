@@ -12,7 +12,7 @@ import IPython.utils.io
 from IPython.core.getipython import get_ipython
 from psutil import virtual_memory
 
-from colab_ssh.progress_bar import NoteProgress
+from progress_bar import NoteProgress
 
 
 def download_file(url: str, path: str):

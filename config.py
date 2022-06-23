@@ -3,7 +3,7 @@
 import secrets
 import subprocess
 
-from colab_ssh.utils import AptManager, run_command
+from utils import AptManager, run_command
 
 
 def config_root_password(msg):

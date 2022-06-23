@@ -4,7 +4,7 @@ import time
 import urllib
 from typing import Tuple
 
-from colab_ssh.utils import download_file, make_executable
+from utils import download_file, make_executable
 
 
 def config_argo_tunnel(msg: str) -> Tuple[str, str, str, str]:
