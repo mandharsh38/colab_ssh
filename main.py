@@ -40,13 +40,6 @@ def setup_ssh(public_key: Union[str, List[str]], mattermost_webhook_address: Opt
     # Config Argo Tunnel
     msg, ssh_command, ssh_config, hostname = config_argo_tunnel(msg)
 
-    # Send notification to Mattermost
-    if mattermost_webhook_address is not None:
-        spec = get_instance_info()
-        spec['ssh_command'] = ssh_command
-        spec['ssh_config'] = ssh_config
-        spec['hostname'] = hostname
-        send_notification_to_mattermost(mattermost_webhook_address, spec)
 
     print(msg)
-
+    
