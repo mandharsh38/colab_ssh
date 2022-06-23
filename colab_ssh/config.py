@@ -69,7 +69,7 @@ def install_common_tool():
     """
 #     config_bashrc()
     install_apt_pkg()
-    install_nvtop()
+#     install_nvtop()
 #     install_pip_dependencies()
 #     install_gdrive_rclone()
 #     install_iterm_shell_integration()
