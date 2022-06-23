@@ -55,13 +55,7 @@ def install_gdrive_rclone():
 
 
 def install_iterm_shell_integration():
-    """
-    Install iTerm shell integration, only work on MacOS iTerm client only,
-    I use `imgcat` a lot, loving it.
-    """
-    print("Installing iterm shell integration")
-    command = "curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash"
-    run_command(command)
+    pass
 
 
 def install_vim_tmux():
@@ -73,10 +67,10 @@ def install_common_tool():
     Install many of the tool that I use for my day to day work. Other might want to
     modify this function.
     """
-    config_bashrc()
+#     config_bashrc()
     install_apt_pkg()
     install_nvtop()
-    install_pip_dependencies()
-    install_gdrive_rclone()
-    install_iterm_shell_integration()
-    install_vim_tmux()
+#     install_pip_dependencies()
+#     install_gdrive_rclone()
+#     install_iterm_shell_integration()
+#     install_vim_tmux()
