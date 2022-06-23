@@ -25,9 +25,7 @@ def install_apt_pkg():
     """
     apt_manager = AptManager()
     apt_manager.commit()
-    all_pkg = ['nano', 'htop', 'cmake',
-               'libncurses5-dev', 'libncursesw5-dev', 'git',
-               'tree', 'zip']
+    all_pkg = ['nano', 'htop', 'libncursesw5-dev', 'tree']
     apt_manager.install_pkg(*all_pkg)
     apt_manager.commit()
 
@@ -41,7 +39,7 @@ def install_nvtop():
                  mkdir -p nvtop/build && cd nvtop/build && cmake .. && make && make install && cd
                  rm -rf nvtop"""
     run_command(command)
-
+    
 
 def install_pip_dependencies():
     pass
